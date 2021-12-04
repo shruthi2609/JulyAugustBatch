@@ -18,8 +18,6 @@ const prop2={imgSource:"https://images-eu.ssl-images-amazon.com/images/I/41Rx3Zh
         <ProductCatalog 
         propObject={prop2}
         ></ProductCatalog>
-        
-       
         </>
     )
 }
