@@ -10,8 +10,7 @@ class Counter extends React.Component{
       // in onClick you can bind this.increment=this.increment.bind(this)
     }
     increment=()=>{
-       this.setState({count:this.state.count+1})
-
+       this.setState({count:this.state.count+0})
     }
     decrement=()=>{
         this.setState({count:this.state.count-1})
@@ -23,7 +22,7 @@ class Counter extends React.Component{
             <a href={this.props.buyLink}>Click here to buy</a>
             <h2>{this.props.price}</h2>
             <button onClick={this.increment}>+</button>
-            {this.state.count}
+            {this.state.count} 
             <button onClick={this.decrement}>-</button>
            {this.state.deliveryOption?<h3> Express Delivery </h3>:<h3>Standard delivery</h3>}
             {/*show delivery option , choose delivery option   */}
