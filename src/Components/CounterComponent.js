@@ -17,6 +17,7 @@ class Counter extends React.Component{
      }
     render(){
         return(
+            
             <div>
             <img src={this.props.imgSource}></img>
             <a href={this.props.buyLink}>Click here to buy</a>
