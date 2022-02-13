@@ -10,28 +10,29 @@ import HooksEg from './Components/HooksEg';
 import CounterHooks from './Components/CounterHooks';
 import ImageSearchHooks from './Components/API/ImageSearchHooks';
 import HookLifecycle from './Components/HookLifeCycle';
-import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'*/
 import Profile from './Components/Profile';
-import Login from './Components/Login';
+import Login from './Components/Login';*/
+import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
+import HooksEg from './Components/HooksEg';
+import ImageSearch from './Components/API/ImageSearch';
+
 function App(){
 return(
-/*<Router>
+<Router>
     <div>
         <nav>
-            <Link to="/counter">Counter Application</Link>
-            <Link to="/imagesearch">Image Search</Link>
+            <Link to="/login">Signin</Link>
+
+           
         </nav>
-        <h3>Sample</h3>
+       
         <Routes>
-            <Route path="/counter" element={<Counter></Counter>}></Route>
-            <Route path="/imagesearch" element={<ImageSearchHooks/>}></Route>
+            <Route path="/login" element={<HooksEg></HooksEg>}></Route>
+          <Route path="/search" element={<ImageSearch></ImageSearch>}></Route>
         </Routes>
     </div>
-</Router>*/
-<div>
-    <Profile></Profile>
-    <Login></Login>
-</div>
+</Router>
+
 )
 }
 //jsx

@@ -7,7 +7,7 @@ return(
     <div>
         <button 
         onClick={
-            ()=>{dispatch(login({name:"john",email:"abc@gmail.com",designation:"SE"}))}
+            ()=>{dispatch(login({fname:"john",email:"abc@gmail.com",designation:"SE"}))}
         }>Login</button>
         <button
         onClick={()=>{dispatch(logout())}}>
