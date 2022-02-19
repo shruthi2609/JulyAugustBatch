@@ -17,6 +17,10 @@ const HooksEg =()=>{
  const [password,setPassword]=useState("")
  const [status,setStatus]=useState(false)
  const history=useNavigate()
+
+const instance=axios.create({
+    baseURL:"http://localhost:3001"
+})
 const change=(event,key)=>{
     if(key=="username"){
         setUsername(event.target.value)
@@ -27,11 +31,14 @@ const change=(event,key)=>{
 }
 const handleLogin=(e)=>{
     e.preventDefault()
-    axios.post("http://localhost:3001/signin",{"email":username,"password":password}).then((res)=>setStatus(res.data.status)).catch((err)=>console.log(err))
-
-   
+    axios.post("http://localhost:3001/signin",{"email":username,"password":password}).
+    then((res)=>{ 
+     instance.defaults.headers.common["Authorization"]="Bearer "+res.data.token
+     localStorage.setItem("TOKEN",res.data.token)
+    setStatus(res.data.status)}).catch((err)=>console.log(err)) 
 }
 const handleNavigate=()=>{
+
     history("/search")
 }
 

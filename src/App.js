@@ -1,7 +1,7 @@
 import React from 'react'
-/*import ProductComponent from './Components/DemoComponent';
+import ProductComponent from './Components/DemoComponent';
 import ClassComponent from './Components/ClassComponent';
-import Counter from './Components/CounterComponent';
+
 import TodoComponent from './Components/TodoComponent'
 import LifeCylceDemo from './Components/LifeCycleMethods'
 import TodoAPI from './Components/API/ToDoAPI';
@@ -11,10 +11,11 @@ import CounterHooks from './Components/CounterHooks';
 import ImageSearchHooks from './Components/API/ImageSearchHooks';
 import HookLifecycle from './Components/HookLifeCycle';
 import Profile from './Components/Profile';
-import Login from './Components/Login';*/
+import Login from './Components/Login';
 import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
-import HooksEg from './Components/HooksEg';
-import ImageSearch from './Components/API/ImageSearch';
+import PasswordUpdate from './Components/updatePassword';
+
+
 
 function App(){
 return(
@@ -22,13 +23,14 @@ return(
     <div>
         <nav>
             <Link to="/login">Signin</Link>
-
-           
         </nav>
        
         <Routes>
             <Route path="/login" element={<HooksEg></HooksEg>}></Route>
-          <Route path="/search" element={<ImageSearch></ImageSearch>}></Route>
+          <Route path="/search" element={ 
+          <ImageSearch></ImageSearch>}></Route>
+          <Route path="/updateuser" element={ 
+          <PasswordUpdate></PasswordUpdate>}></Route>
         </Routes>
     </div>
 </Router>
@@ -38,3 +40,4 @@ return(
 //jsx
 // 
 export default App;
+
